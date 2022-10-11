@@ -1,45 +1,31 @@
-package com.edu;
+package com.inter;
 
-		import java.util.Scanner;
-
-		class Employee{
-			//instance variable :the varibles declared in the class
-			 int age; //int 0
-			 String name;//String null
-			 float salary; //0.0
-			
-			public void inputData() {
-				Scanner sc=new Scanner(System.in);
-				System.out.println("Enter name");
-				name=sc.nextLine();
-				System.out.println("Enter age");
-				age=sc.nextInt();
-				System.out.println("Enter salary");
-				salary=sc.nextFloat();
-			}
-			
-			public void employeeDisplay() { 
-				System.out.println("Name="+name);
-				System.out.println("age="+age);
-				System.out.println("salary="+salary);
-			}
-		}
-
-		public class EmployeeMain {
-
-			public static void main(String[] args) {
+class EmployeeException extends Exception{
+	public EmployeeException(String s) {
+		super(s);
+	}
+}
+class Employee{
+	public void checkid(int eid) {
+		try {
+			if(eid<=0 || eid>=999) {
+				throw new EmployeeException("invalid Employee ID");
 				
-				System.out.println("main method");
-				Employee employeeobject1=new Employee(); //Object creation
-				employeeobject1.inputData();
-				employeeobject1.employeeDisplay();
-				Employee employeeobject2=new Employee(); //Object creation
-				employeeobject2.inputData();
-				employeeobject2.employeeDisplay();
-				
+			}else {
+				System.out.println("employee id is valid");
 			}
-
+		}catch(EmployeeException e) {
+			e.printStackTrace();
 		}
+	}
+}
 
+public class EmployeeMain {
 
-	
+	public static void main(String[] args) {
+		Employee ob = new Employee();
+		ob.checkid(1000);
+
+	}
+
+}
