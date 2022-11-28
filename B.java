@@ -1,13 +1,12 @@
-package com.ilo;
+package com.oppo;
 
+public class B  implements Printable{
 
+	public void print() {
+		System.out.println("B class");
+		
+	}
 
-
-public class B {  
-B(){
-	System.out.println("b is created");
-	}  
-void print(){
-	System.out.println("hello b");
-	}  
 }
+
+
