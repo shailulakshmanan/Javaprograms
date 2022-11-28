@@ -1,9 +1,5 @@
-package com.auto;
-
-import com.auto.B;
-
-public class A {
-
+package com.ilo;
+public class A {  
 B b1;  //byName object B b and id=b both should be same
 A()
 {
@@ -26,4 +22,3 @@ void display(){
    b1.print();  
 }  
 }
-

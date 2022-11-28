@@ -1,5 +1,4 @@
-package com.auto;
-
+package com.ilo;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,9 +8,5 @@ public static void main(String[] args) {
     ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");  
     A a=context.getBean("a",A.class);  
     a.display();  
+}  
 }
-
-	}
-
- 
-
